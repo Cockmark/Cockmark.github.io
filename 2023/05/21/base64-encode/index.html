@@ -6,11 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="title: base64_encodedate: 2023-05-21 22:31:44tags:基于base64编码的程序设计 基于base64编码的设计1.需求分析&lt;1&gt;什么是base64编码Base64编码是一种将二进制数据转化为ASCII字符的编码方式。它将任意长度的二进制数据通过一种固定的算法转换成较短的字符串，且该字符串只包含英文字母、数字以及几个特殊符号。 由于ASCI">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2023/05/21/base64-encode/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title: base64_encodedate: 2023-05-21 22:31:44tags:基于base64编码的程序设计 基于base64编码的设计1.需求分析&lt;1&gt;什么是base64编码Base64编码是一种将二进制数据转化为ASCII字符的编码方式。它将任意长度的二进制数据通过一种固定的算法转换成较短的字符串，且该字符串只包含英文字母、数字以及几个特殊符号。 由于ASCI">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-21T14:31:44.332Z">
+<meta property="article:modified_time" content="2023-05-21T14:55:54.486Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -69,9 +73,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-base64-encode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-base64-encode" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/21/base64-encode/" class="article-date">
   <time class="dt-published" datetime="2023-05-21T14:31:44.332Z" itemprop="datePublished">2023-05-21</time>
@@ -104,153 +106,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-new-life-conclusion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/02/new-life-conclusion/" class="article-date">
-  <time class="dt-published" datetime="2023-04-02T08:50:01.000Z" itemprop="datePublished">2023-04-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/02/new-life-conclusion/">new life conclusion</a>
-    </h1>
+    <a href="/2023/04/02/new-life-conclusion/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">new life conclusion</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="形参和实参"><a href="#形参和实参" class="headerlink" title="形参和实参"></a>形参和实参</h2><p>在C语言中，函数里的形参不需要和主函数里的函数调用的参数名字一样，形参和实参是两个不同的概念，形参是函数定义时声明的变量，它们的作用是接受函数调用中传递的实参值，而实参是在函数调用时传递给函数的值。</p>
-<p>因此，形参可以使用任何合法的标识符作为名称，只要其类型与函数调用中传递的实参类型匹配即可，比如，在主函数中调用一个函数时，可以传递参数s，而在函数定义中将该参数命名为t，只要其类型相同，就可以正常接受主函数传递的参数值。</p>
-<p>在函数定义中，形式参数<code>char s[]</code>和<code>char *s</code>是等价的，我们通常更习惯使用后一种形式，因为它比前者更直观地表明该参数是一个指针，如果将数组名传递参数，函数可以根据情况判定是按照数组处理还是按照指针处理，随后根据相应的方式操作该参数。</p>
-<p><img src="C:\壁纸\微信图片_202103172317317.jpg"></p>
-<h2 id="二维数组作为函数参数"><a href="#二维数组作为函数参数" class="headerlink" title="二维数组作为函数参数"></a>二维数组作为函数参数</h2><p>二维数组可以用花括号括起来的初值表就行初始化，将二维数组作为参数传递给函数，在函数的声明中必须指明数组的列数，数组的行数倒是没有太大关系。原因：函数调用时传递的是一个指针，它指向由行向量构成的一维数组，其中每个行向量是具有13个整型元素的一维数组。</p>
-<p>例如，<code>char *lineptr[MAXLINES]</code>表示<code>lineptr</code>是一个具有<code>MAXLINEES</code>个元素的一维数组，其中数组的每个元素是一个指向字符类型对象的指针，也就是说，<code>lineptr[i]</code>是一个字符指针，而<code>*lineptr[i]</code>是该指针指向的第<code>i</code>个文本行的首字符。</p>
-<h1 id="主函数参数问题"><a href="#主函数参数问题" class="headerlink" title="主函数参数问题"></a>主函数参数问题</h1><p>在C语言中，可以使用命令行参数来向程序传递信息，这些信息可以用于控制程序的运行方式或者输入数据。程序启动时，操作系统会将命令行参数传递给程序，程序可以通过argc和argv这两个参数来获取这些参数。</p>
-<p>argc表示命令行参数的数量，包括程序名本身。argv是一个指向字符串数组的指针，每个字符串对应一个命令行参数。例如，argv[0]表示程序名，argv[1]表示第一个命令行参数，以此类推。</p>
-<p>可以在程序开始时将命令行参数传递给程序，调用主函数main时，它带有两个参数，第一个参数（习惯上称为argc，用于参数计数）的值表示运行程序时命令行中参数的数目；第二个参数（称为argv，用于参数向量）是一个指向字符串数组的指针，其中每个字符串对应一个参数，我们通常用多级指针处理这些字符串。</p>
-<p>Argv[0]的值启动该程序的程序名，因此argc的值至少为1。如果argc的值为1，则说明程序名后面没有命令行参数。另外，第一个可选参数为argv[1]，最后一个可选参数为argv[argc-1],argv[argc]的值必须为空指针。</p>
-<p>C语言中，*++argv是一个指针运算符和递增运算符的组合，它先将argv指针向后移动一个位置，然后解引用该指针，获得其指向的值。递增运算符++的优先级更高于间接寻址运算符<em>，所以，先执行++操作，再执行</em>操作。</p>
-<p>在处理命令行参数时，可以使用循环和指针运算符来遍历argv数组。例如，*++argv表示先将argv指针向后移动一个位置，然后解引用该指针，获取其指向的字符串。</p>
-<p><img src="C:\壁纸\微信图片_202103172317315.jpg"></p>
-<h1 id="结构体struct"><a href="#结构体struct" class="headerlink" title="结构体struct"></a>结构体struct</h1><p>结构声明可以用来定义自定义数据类型，它可以包含多个不同类型的变量</p>
-<p>Struct { }x,y,z;<br>如果结构声明的后面不带变量表，则不需要为它分配存储空间，它仅仅描述了一个结构的模板或者轮廓。</p>
-<h4 id="感谢你耐心看完，此文写于2023-4-2日，下午刚睡醒，天阴，于小舅家，中午吃完自家牛肉火锅，心情大好，博客撰文也算基本弄明白了，后续会继续改进格式和观感的"><a href="#感谢你耐心看完，此文写于2023-4-2日，下午刚睡醒，天阴，于小舅家，中午吃完自家牛肉火锅，心情大好，博客撰文也算基本弄明白了，后续会继续改进格式和观感的" class="headerlink" title="感谢你耐心看完，此文写于2023-4-2日，下午刚睡醒，天阴，于小舅家，中午吃完自家牛肉火锅，心情大好，博客撰文也算基本弄明白了，后续会继续改进格式和观感的"></a>感谢你耐心看完，此文写于2023-4-2日，下午刚睡醒，天阴，于小舅家，中午吃完自家牛肉火锅，心情大好，博客撰文也算基本弄明白了，后续会继续改进格式和观感的</h4>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/02/new-life-conclusion/" data-id="clfz7qdhs0000ogv01hklfv0w" data-title="new life conclusion" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-我的第一篇文章" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="article-date">
-  <time class="dt-published" datetime="2023-03-22T15:28:55.000Z" itemprop="datePublished">2023-03-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" data-id="clfkvds940001xkv002kv7cas" data-title="我的第一篇文章" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/03/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-03-22T15:08:21.176Z" itemprop="datePublished">2023-03-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/03/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/22/hello-world/" data-id="clfkvds8i0000xkv095g12ula" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
