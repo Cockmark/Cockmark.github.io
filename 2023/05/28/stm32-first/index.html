@@ -4,15 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>Archives: 2023/3 | Hexo</title>
+  <title>stm32_first | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/03/index.html">
+  <meta name="description" content="stm32小结刚开始的情况，板子大致结构都不清楚，串口JLINK烧录，软件和烧录流程折腾了好一会儿，大概就是对单片机零基础。 现在的情况，有一个大致的框架了，对于单片机，上周看了正点和野火的视频，这周自己开始跟着程序写代码，从新建工程开始，配置文件花了好久，以前从来没有过配置文件要花这么久时间的。这周一步一步，把跑马灯，按键输入，中断给弄完了，但是如果细究的话，可以改改比如延迟时间，跑马灯效果等，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stm32_first">
+<meta property="og:url" content="http://example.com/2023/05/28/stm32-first/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="stm32小结刚开始的情况，板子大致结构都不清楚，串口JLINK烧录，软件和烧录流程折腾了好一会儿，大概就是对单片机零基础。 现在的情况，有一个大致的框架了，对于单片机，上周看了正点和野火的视频，这周自己开始跟着程序写代码，从新建工程开始，配置文件花了好久，以前从来没有过配置文件要花这么久时间的。这周一步一步，把跑马灯，按键输入，中断给弄完了，但是如果细究的话，可以改改比如延迟时间，跑马灯效果等，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\%E5%A3%81%E7%BA%B8\%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202103172317314.jpg">
+<meta property="article:published_time" content="2023-05-28T13:05:09.000Z">
+<meta property="article:modified_time" content="2023-05-28T13:06:17.828Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\%E5%A3%81%E7%BA%B8\%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202103172317314.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -69,58 +75,56 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/03/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-03-22T15:28:55.000Z" itemprop="datePublished">Mar 22</time>
+        <section id="main"><article id="post-stm32-first" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/28/stm32-first/" class="article-date">
+  <time class="dt-published" datetime="2023-05-28T13:05:09.000Z" itemprop="datePublished">2023-05-28</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">我的第一篇文章</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      stm32_first
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/03/22/hello-world/" class="archive-article-date">
-  <time class="dt-published" datetime="2023-03-22T15:08:21.176Z" itemprop="datePublished">Mar 22</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/03/22/hello-world/">Hello World</a>
-    </h1>
-  
+        <h1 id="stm32小结"><a href="#stm32小结" class="headerlink" title="stm32小结"></a>stm32小结</h1><p>刚开始的情况，板子大致结构都不清楚，串口JLINK烧录，软件和烧录流程折腾了好一会儿，大概就是对单片机零基础。</p>
+<p>现在的情况，有一个大致的框架了，对于单片机，上周看了正点和野火的视频，这周自己开始跟着程序写代码，从新建工程开始，配置文件花了好久，以前从来没有过配置文件要花这么久时间的。这周一步一步，把跑马灯，按键输入，中断给弄完了，但是如果细究的话，可以改改比如延迟时间，跑马灯效果等，这样理解的会更清楚。</p>
+<p>下周继续按部就班，一步一个脚印学，不要太着急。</p>
+<p><img src="C:\壁纸\微信图片_202103172317314.jpg"></p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/28/stm32-first/" data-id="cli7fptqg0000nov0a5un4xlz" data-title="stm32_first" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/21/base64-encode/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
